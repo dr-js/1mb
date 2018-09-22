@@ -1,0 +1,14 @@
+{
+  "name": "1mb",
+  "version": "0.0.0",
+  "author": "dr-js",
+  "license": "MIT",
+  "description": "1MB of pure dependency",
+  "main": "1mb",
+  "repository": "github:dr-js/1mb",
+  "engines": {
+    "node": ">=8.10",
+    "npm": ">=6"
+  },
+  "sideEffects": false
+}
