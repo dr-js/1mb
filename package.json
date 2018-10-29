@@ -1,6 +1,6 @@
 {
   "name": "1mb",
-  "version": "0.0.2",
+  "version": "0.0.3-dev.0",
   "description": "1MB of pure dependency",
   "author": "dr-js",
   "license": "MIT",
@@ -17,12 +17,12 @@
     "prepack": "echo \"Error: pack with script-*\" && exit 1"
   },
   "engines": {
-    "node": ">=8.12",
+    "node": ">=10",
     "npm": ">=6"
   },
   "devDependencies": {
-    "dev-dep-babel": "0.5.0-dev.2",
-    "dev-dep-tool": "0.5.0-dev.2"
+    "dr-dev": "0.0.2-dev.1",
+    "dr-dev-babel": "0.0.2-dev.1"
   },
   "sideEffects": false
 }
