@@ -1,14 +1,28 @@
 {
   "name": "1mb",
-  "version": "0.0.1",
+  "version": "0.0.2-dev.0",
+  "description": "1MB of pure dependency",
   "author": "dr-js",
   "license": "MIT",
-  "description": "1MB of pure dependency",
-  "main": "1mb",
   "repository": "github:dr-js/1mb",
+  "main": "./1mb.js",
+  "scripts": {
+    "// script ======================": "",
+    "script-pack": "babel-node ./script quiet pack",
+    "script-pack-test": "babel-node ./script verbose pack test",
+    "script-publish": "babel-node ./script pack publish",
+    "script-publish-dev": "babel-node ./script pack publish-dev",
+    "// =============================": "",
+    "test": "npm run script-pack-test",
+    "prepack": "echo \"Error: pack with script-*\" && exit 1"
+  },
   "engines": {
-    "node": ">=8.10",
+    "node": ">=8.12",
     "npm": ">=6"
+  },
+  "devDependencies": {
+    "dev-dep-babel": "0.5.0-dev.2",
+    "dev-dep-tool": "0.5.0-dev.2"
   },
   "sideEffects": false
 }
