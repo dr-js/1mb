@@ -1,7 +1,9 @@
 import { strictEqual, doesNotThrow } from 'assert'
 import { resolve } from 'path'
 import { readFileSync } from 'fs'
+
 import { getPathStat, copyPath } from 'dr-js/module/node/file/File'
+
 import { argvFlag, runMain } from 'dr-dev/module/main'
 import { getLogger } from 'dr-dev/module/logger'
 import { initOutput, packOutput, publishOutput } from 'dr-dev/module/commonOutput'

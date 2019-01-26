@@ -1,6 +1,6 @@
 {
   "name": "1mb",
-  "version": "0.0.3-dev.0",
+  "version": "0.0.3",
   "description": "1MB of pure dependency",
   "author": "dr-js",
   "license": "MIT",
@@ -21,8 +21,8 @@
     "npm": ">=6"
   },
   "devDependencies": {
-    "dr-dev": "0.0.2-dev.1",
-    "dr-dev-babel": "0.0.2-dev.1"
+    "dr-dev": "0.0.3",
+    "dr-dev-babel": "0.0.3"
   },
   "sideEffects": false
 }
