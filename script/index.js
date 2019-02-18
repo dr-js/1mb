@@ -4,10 +4,8 @@ import { readFileSync } from 'fs'
 
 import { getPathStat, copyPath } from 'dr-js/module/node/file/File'
 
-import { argvFlag, runMain } from 'dr-dev/module/main'
-import { getLogger } from 'dr-dev/module/logger'
-import { initOutput, packOutput, publishOutput } from 'dr-dev/module/commonOutput'
-import { writeLicenseFile } from 'dr-dev/module/license'
+import { runMain, argvFlag } from 'dr-dev/module/main'
+import { initOutput, packOutput, publishOutput } from 'dr-dev/module/output'
 
 const PATH_ROOT = resolve(__dirname, '..')
 const PATH_OUTPUT = resolve(__dirname, '../output-gitignore')
@@ -40,9 +38,8 @@ const testOutput = async ({ logger: { padLog, stepLog } }) => {
 runMain(async (logger) => {
   const isTest = argvFlag('test', 'publish', 'publish-dev')
   const packageJSON = await initOutput({ fromRoot, fromOutput, logger })
-  writeLicenseFile(fromRoot('LICENSE'), packageJSON.license, packageJSON.author)
   await copyPath(fromRoot('1mb.js'), fromOutput('1mb.js'))
   const pathPackagePack = await packOutput({ fromRoot, fromOutput, logger })
   isTest && await testOutput({ logger })
   await publishOutput({ flagList: process.argv, packageJSON, pathPackagePack, logger })
-}, getLogger(process.argv.slice(2).join('+'), argvFlag('quiet')))
+})
