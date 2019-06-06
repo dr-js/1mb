@@ -1,6 +1,6 @@
 {
   "name": "1mb",
-  "version": "0.0.4-dev.0",
+  "version": "0.0.4",
   "description": "1MB of pure dependency",
   "author": "dr-js",
   "license": "MIT",
@@ -12,7 +12,10 @@
     "script-pack-test": "babel-node ./script verbose pack test",
     "script-publish": "babel-node ./script pack publish",
     "script-publish-dev": "babel-node ./script pack publish-dev",
+    "// test ========================": "",
+    "test-source": "dr-dev --TR @babel/register -T ./ --TFS .test.js",
     "// =============================": "",
+    "lint": "eslint ./script/",
     "test": "npm run script-pack-test",
     "prepack": "echo \"Error: pack with script-*\" && exit 1"
   },
@@ -21,8 +24,8 @@
     "npm": ">=6"
   },
   "devDependencies": {
-    "dr-dev": "0.0.6-dev.3",
-    "dr-dev-babel": "0.0.6-dev.3"
+    "dr-dev": "0.0.6-dev.8",
+    "dr-dev-babel": "0.0.6-dev.8"
   },
   "sideEffects": false
 }
